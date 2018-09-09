@@ -282,7 +282,7 @@ footer {
 }
 
 footer:after {
-	content: " ";
+	content: ' ';
 	display: table;
 	clear: both;
 }
@@ -308,44 +308,75 @@ footer a:hover {
 }
 
 aside {
+	width: 100%;
 }
 
 .sidebar {
+	background: #1b1b21;
+	color: #47495d;
+	padding: 4em 0;
+	text-align: center;
 }
 
 .design-selection {
+	float: left;
+	width: 60%;
+	font-style: italic;
+	box-sizing: border-box;
+	border-right: 1px solid #47495d;
 }
 
 .design-archives,
 .zen-resources {
+	display: inline-block;
+	width: 40%;
 }
 
 .sidebar h3 {
+	font-size: 1em;
+	margin: 0;
+	line-height: 1.6;
+	padding: 0.5em 4%;
+	color: #6b6d85;
 }
 
 .sidebar ul {
+	padding: 0;
 }
 
 .sidebar li {
+	list-style: none;
+	padding: 0.3em 2%;
 }
 
 .sidebar a {
+	font-family: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma, sans-serif;
+	font-style: normal;
+	color: #9bc152;
+	letter-spacing: 0.06em;
 }
 
 .sidebar a:hover {
+	color: #f6f4ec;
 }
 
 .design-selection a:nth-of-type(even) {
+	font-family: 'Alegreya Sans', Verdana, Tahoma, sans-serif;
+	letter-spacing: 0;
+	color: #f6f4ec;
 }
 
 .sidebar a:hover:nth-of-type(even) {
+	color: #47495d;
 }
 
 .zen-resources h3 {
+	padding-top: 0.92em;
 }
 
 .design-archives a,
 .zen-resources a {
+	color: #47495d;
 }
 
 /* Media Queries */
