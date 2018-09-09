@@ -195,12 +195,22 @@ header abbr {
 }
 
 .requirements p:last-of-type {
+	max-width: 92%;
+	text-align: center;
+	font-style: italic;
+	text-indent: 0;
+	padding-top: 4em;
+	color: #6d6f81;
 }
 
 .requirements p:last-of-type a {
+	color: #9bc152;
+	border-bottom: none;
 }
 
 .requirements p:last-of-type a:hover {
+	color: #f6f4ec;
+	border-bottom: none;
 }
 
 .benefits {
