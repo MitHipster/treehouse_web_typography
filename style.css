@@ -166,20 +166,31 @@ header abbr {
 
 .preamble,
 .requirements {
+	background: #282932;
+	padding: 4em 6%;
 }
 
 .preamble h3,
 .requirements h3 {
+	max-width: 34rem;
+	margin: 0 auto 0.62em;
 }
 
 .preamble p,
 .requirements p {
+	max-width: 34rem;
+	margin: 0 auto;
+	color: #f6f4ec;
 }
 
 .requirements a {
+	color: #f6f4ec;
+	border-bottom: 1px solid #f6f4ec;
 }
 
 .requirements a:hover {
+	color: #9bc152;
+	border-bottom: 1px solid #9bc152;
 }
 
 .requirements p:last-of-type {
@@ -192,12 +203,20 @@ header abbr {
 }
 
 .benefits {
+	background: #1b1b21;
+	padding: 4em 6%;
 }
 
 .benefits h3 {
+	max-width: 34rem;
+	margin: 0 auto 0.62em;
+	color: #8b8d9b;
 }
 
 .benefits p {
+	max-width: 34rem;
+	margin: 0 auto;
+	color: #6d6f81;
 }
 
 .explanation,
