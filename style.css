@@ -278,18 +278,33 @@ header abbr {
 }
 
 footer {
+	background: #9bc152;
 }
 
 footer:after {
+	content: " ";
+	display: table;
+	clear: both;
 }
 
 footer a {
+	float: left;
+	box-sizing: border-box;
+	width: 20%;
+	text-align: center;
+	background: #9bc152;
+	color: #f6f4ec;
+	letter-spacing: 0.05em;
+	padding: 1em 0;
 }
 
 footer a:nth-of-type(even) {
+	background: #81a53d;
 }
 
 footer a:hover {
+	background: #f6f4ec;
+	color: #9bc152;
 }
 
 aside {
