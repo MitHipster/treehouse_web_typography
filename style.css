@@ -36,6 +36,12 @@ body {
 	padding: 0;
 	color: #282932;
 	background: #f6f4ec;
+	font-feature-settings: 'kern', 'liga';
+	-moz-font-feature-settings: 'kern', 'liga';
+	-moz-font-feature-settings: 'kern=1', 'liga=1';
+	-ms-font-feature-settings: 'kern', 'liga';
+	-o-font-feature-settings: 'kern', 'liga';
+	-webkit-font-feature-settings: 'kern', 'liga';
 }
 
 p {
@@ -86,6 +92,7 @@ li {
 
 a:link {
 	text-decoration: none;
+	transition: all 0.4s ease;
 }
 a:visited {
 	text-decoration: none;
@@ -112,6 +119,11 @@ abbr {
 header {
 	padding: 10em 4%;
 	text-align: center;
+	animation: fadein 2s;
+	-webkit-animation: fadein 2s; /* Safari and Chrome */
+	-moz-animation: fadein 2s; /* Firefox */
+	-ms-animation: fadein 2s; /* Internet Explorer */
+	-o-animation: fadein 2s; /* Opera */
 }
 
 header h1 {
@@ -530,6 +542,11 @@ aside {
 		position: absolute;
 		top: -26.5em;
 		transition: all 0.4s ease;
+		animation: fadein 2s;
+		-webkit-animation: fadein 2s; /* Safari and Chrome */
+		-moz-animation: fadein 2s; /* Firefox */
+		-ms-animation: fadein 2s; /* Internet Explorer */
+		-o-animation: fadein 2s; /* Opera */
 	}
 
 	aside:hover {
@@ -603,3 +620,52 @@ aside {
 }
 
 /* Animations */
+
+@keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Firefox */
+@-moz-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Safari and Chrome */
+@-webkit-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+/* Opera */
+@-o-keyframes fadein {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
