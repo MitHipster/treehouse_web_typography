@@ -100,6 +100,8 @@ a:active {
 abbr {
 	font-family: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma, sans-serif;
 	text-transform: lowercase;
+	/* Removes dotted underlines that denotes text has a title */
+	text-decoration: none;
 }
 
 ::selection {
@@ -333,7 +335,7 @@ aside {
 }
 
 .sidebar h3 {
-	font-size: 1em;
+	font-size: 0.75em;
 	margin: 0;
 	line-height: 1.6;
 	padding: 0.5em 4%;
@@ -504,12 +506,28 @@ aside {
 	}
 
 	aside {
+		position: absolute;
+		top: -26.5em;
+		transition: all 0.4s ease;
 	}
 
 	aside:hover {
+		top: -1em;
 	}
 
 	aside:after {
+		position: absolute;
+		content: "+";
+		text-align: center;
+		background: #1b1b21;
+		color: #f6f4ec;
+		font-size: 20px;
+		width: 30px;
+		height: 30px;
+		border-radius: 30px;
+		bottom: -0.65em;
+		left: 50%;
+		margin-left: -15px;
 	}
 
 	aside {
