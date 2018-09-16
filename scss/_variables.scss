@@ -3,13 +3,32 @@
 // Primary
 $white: #f6f4ec;
 $green: #9bc152;
-$navyGray: #282932;
+$navy-gray: #282932;
 
 // Secondary
-$mediumGreen: #81a53d;
-$darkGreen: #708647;
-$lightGray: #8b8d9b;
-$mediumGray: #6d6f81;
-$mediumBlue: #6b6d85;
-$darkBlue: #47495d;
-$darkNavy: #1b1b21;
+$medium-green: #81a53d;
+$dark-green: #708647;
+$light-gray: #8b8d9b;
+$medium-gray: #6d6f81;
+$medium-blue: #6b6d85;
+$dark-blue: #47495d;
+$dark-navy: #1b1b21;
+
+// Fonts
+
+// Families
+$font-body: 'Alegreya Sans', Verdana, Tahoma, sans-serif;
+$font-heading:'Alegreya', Georgia, serif;
+$font-link: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma, sans-serif;
+
+// Sizes
+$font-body-size: 1.25em;
+$font-h1-size: 3.157em;
+$font-h2-size: 2.369em;
+$font-h3-size: 1.777em;
+
+$font-header-h1: 6.2em;
+$font-header-h2: 1.777em;
+
+$font-summary-size: 1.333em;
+$font-sidebar-size: 0.75em;
