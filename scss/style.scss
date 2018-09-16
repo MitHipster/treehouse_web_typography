@@ -1,24 +1,28 @@
 /* css Zen Garden default style v1.02 */
 /* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+
 /* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+
 /* Webfonts */
 /* prettier-ignore */
-@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,400i|Alegreya+Sans:400,400i|Alegreya:400i,900i");
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC:400,400i|Alegreya+Sans:400,400i|Alegreya:400i,900i');
+
 /* Imports */
+@import 'variables';
+
 /* Basic Elements */
 html {
 	margin: 0;
 	padding: 0;
 }
-
 body {
 	font-family: 'Alegreya Sans', Verdana, Tahoma, sans-serif;
 	font-size: 1.25em;
 	line-height: 1.6;
 	margin: 0;
 	padding: 0;
-	color: #282932;
-	background: #f6f4ec;
+	color: $navyGray;
+	background: $white;
 	font-feature-settings: 'kern', 'liga';
 	-moz-font-feature-settings: 'kern', 'liga';
 	-moz-font-feature-settings: 'kern=1', 'liga=1';
@@ -44,7 +48,7 @@ h6 {
 	font-family: 'Alegreya', Georgia, serif;
 	font-weight: normal;
 	font-style: italic;
-	color: #9bc152;
+	color: $green;
 }
 
 /* Type scale was set using type-scale.com. Base font was set to 20px and scale was set to Perfect Fourth */
@@ -77,7 +81,6 @@ a:link {
 	text-decoration: none;
 	transition: all 0.4s ease;
 }
-
 a:visited {
 	text-decoration: none;
 }
@@ -96,24 +99,21 @@ abbr {
 }
 
 /* Specific Styles */
+
 header {
 	padding: 10em 4%;
 	text-align: center;
 	animation: fadein 2s;
-	-webkit-animation: fadein 2s;
-	/* Safari and Chrome */
-	-moz-animation: fadein 2s;
-	/* Firefox */
-	-ms-animation: fadein 2s;
-	/* Internet Explorer */
-	-o-animation: fadein 2s;
-	/* Opera */
+	-webkit-animation: fadein 2s; /* Safari and Chrome */
+	-moz-animation: fadein 2s; /* Firefox */
+	-ms-animation: fadein 2s; /* Internet Explorer */
+	-o-animation: fadein 2s; /* Opera */
 }
 
 header h1 {
 	font-size: 6.2em;
 	font-weight: 900;
-	color: #282932;
+	color: $navyGray;
 	margin: 0;
 }
 
@@ -130,8 +130,8 @@ header abbr {
 }
 
 .summary {
-	color: #f6f4ec;
-	background: #9bc152;
+	color: $white;
+	background: $green;
 	text-align: center;
 	padding: 1.5em 6%;
 }
@@ -149,23 +149,23 @@ header abbr {
 	font-style: normal;
 	font-size: 1em;
 	margin-top: 0.2em;
-	color: #708647;
+	color: $darkGreen;
 }
 
 .summary a {
 	font-family: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma, sans-serif;
-	color: #708647;
-	border-bottom: 1px solid #708647;
+	color: $darkGreen;
+	border-bottom: 1px solid $darkGreen;
 }
 
 .summary a:hover {
-	color: #f6f4ec;
-	border-bottom: 1px solid #f6f4ec;
+	color: $white;
+	border-bottom: 1px solid $white;
 }
 
 .preamble,
 .requirements {
-	background: #282932;
+	background: $navyGray;
 	padding: 4em 6%;
 }
 
@@ -179,17 +179,17 @@ header abbr {
 .requirements p {
 	max-width: 34rem;
 	margin: 0 auto;
-	color: #f6f4ec;
+	color: $white;
 }
 
 .requirements a {
-	color: #f6f4ec;
-	border-bottom: 1px solid #f6f4ec;
+	color: $white;
+	border-bottom: 1px solid $white;
 }
 
 .requirements a:hover {
-	color: #9bc152;
-	border-bottom: 1px solid #9bc152;
+	color: $green;
+	border-bottom: 1px solid $green;
 }
 
 .requirements p:last-of-type {
@@ -198,34 +198,34 @@ header abbr {
 	font-style: italic;
 	text-indent: 0;
 	padding-top: 4em;
-	color: #6d6f81;
+	color: $mediumGray;
 }
 
 .requirements p:last-of-type a {
-	color: #9bc152;
+	color: $green;
 	border-bottom: none;
 }
 
 .requirements p:last-of-type a:hover {
-	color: #f6f4ec;
+	color: $white;
 	border-bottom: none;
 }
 
 .benefits {
-	background: #1b1b21;
+	background: $darkNavy;
 	padding: 4em 6%;
 }
 
 .benefits h3 {
 	max-width: 34rem;
 	margin: 0 auto 0.62em;
-	color: #8b8d9b;
+	color: $lightGray;
 }
 
 .benefits p {
 	max-width: 34rem;
 	margin: 0 auto;
-	color: #6d6f81;
+	color: $mediumGray;
 }
 
 .explanation,
@@ -242,7 +242,7 @@ header abbr {
 .participation {
 	display: inline-block;
 	padding: 4em 8% 4em 10%;
-	background: #9bc152;
+	background: $green;
 }
 
 .explanation h3,
@@ -256,17 +256,17 @@ header abbr {
 }
 
 .participation h3 {
-	color: #f6f4ec;
+	color: $white;
 }
 
 .participation a {
-	color: #282932;
-	border-bottom: 1px solid #282932;
+	color: $navyGray;
+	border-bottom: 1px solid $navyGray;
 }
 
 .participation a:hover {
-	color: #f6f4ec;
-	border-bottom: 1px solid #f6f4ec;
+	color: $white;
+	border-bottom: 1px solid $white;
 }
 
 .participation p:last-of-type a:nth-of-type(1),
@@ -276,7 +276,7 @@ header abbr {
 }
 
 footer {
-	background: #9bc152;
+	background: $green;
 }
 
 footer:after {
@@ -290,19 +290,19 @@ footer a {
 	box-sizing: border-box;
 	width: 20%;
 	text-align: center;
-	background: #9bc152;
-	color: #f6f4ec;
+	background: $green;
+	color: $white;
 	letter-spacing: 0.05em;
 	padding: 1em 0;
 }
 
 footer a:nth-of-type(even) {
-	background: #81a53d;
+	background: $mediumGreen;
 }
 
 footer a:hover {
-	background: #f6f4ec;
-	color: #9bc152;
+	background: $white;
+	color: $green;
 }
 
 aside {
@@ -310,8 +310,8 @@ aside {
 }
 
 .sidebar {
-	background: #1b1b21;
-	color: #47495d;
+	background: $darkNavy;
+	color: $darkBlue;
 	padding: 4em 0;
 	text-align: center;
 }
@@ -321,7 +321,7 @@ aside {
 	width: 60%;
 	font-style: italic;
 	box-sizing: border-box;
-	border-right: 1px solid #47495d;
+	border-right: 1px solid $darkBlue;
 }
 
 .design-archives,
@@ -335,7 +335,7 @@ aside {
 	margin: 0;
 	line-height: 1.6;
 	padding: 0.5em 4%;
-	color: #6b6d85;
+	color: $mediumBlue;
 }
 
 .sidebar ul {
@@ -350,22 +350,22 @@ aside {
 .sidebar a {
 	font-family: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma, sans-serif;
 	font-style: normal;
-	color: #9bc152;
+	color: $green;
 	letter-spacing: 0.06em;
 }
 
 .sidebar a:hover {
-	color: #f6f4ec;
+	color: $white;
 }
 
 .design-selection a:nth-of-type(even) {
 	font-family: 'Alegreya Sans', Verdana, Tahoma, sans-serif;
 	letter-spacing: 0;
-	color: #f6f4ec;
+	color: $white;
 }
 
 .sidebar a:hover:nth-of-type(even) {
-	color: #47495d;
+	color: $darkBlue;
 }
 
 .zen-resources h3 {
@@ -374,10 +374,11 @@ aside {
 
 .design-archives a,
 .zen-resources a {
-	color: #47495d;
+	color: $darkBlue;
 }
 
 /* Media Queries */
+
 @media (max-width: 64em) {
 	body {
 		font-size: 1.125em;
@@ -403,6 +404,7 @@ aside {
 		max-width: 27.5rem;
 	}
 }
+
 @media (max-width: 54em) {
 	body {
 		font-size: 1em;
@@ -412,6 +414,7 @@ aside {
 		max-width: 34rem;
 	}
 }
+
 @media (max-width: 47em) {
 	header h1 {
 		font-size: 4.5em;
@@ -427,11 +430,11 @@ aside {
 		padding: 4em 6%;
 	}
 }
+
 @media (max-width: 34em) {
 	header {
 		padding: 6em 4%;
 	}
-
 	header h1 {
 		font-size: 2.6em;
 		line-height: 0.8;
@@ -464,7 +467,7 @@ aside {
 	}
 
 	.design-selection li:last-of-type {
-		border-bottom: 1px solid #47495d;
+		border-bottom: 1px solid $darkBlue;
 		padding-bottom: 3em;
 	}
 
@@ -477,6 +480,7 @@ aside {
 		width: 100%;
 	}
 }
+
 @media (min-width: 47em) {
 	.benefits {
 		position: absolute;
@@ -502,6 +506,7 @@ aside {
 		line-height: 1.4;
 	}
 }
+
 @media (min-width: 54em) {
 	.benefits {
 		max-width: 8rem;
@@ -509,6 +514,7 @@ aside {
 		margin-left: -28rem;
 	}
 }
+
 @media (min-width: 64.125em) {
 	.benefits {
 		max-width: 9.4rem;
@@ -521,14 +527,10 @@ aside {
 		top: -26.5em;
 		transition: all 0.4s ease;
 		animation: fadein 2s;
-		-webkit-animation: fadein 2s;
-		/* Safari and Chrome */
-		-moz-animation: fadein 2s;
-		/* Firefox */
-		-ms-animation: fadein 2s;
-		/* Internet Explorer */
-		-o-animation: fadein 2s;
-		/* Opera */
+		-webkit-animation: fadein 2s; /* Safari and Chrome */
+		-moz-animation: fadein 2s; /* Firefox */
+		-ms-animation: fadein 2s; /* Internet Explorer */
+		-o-animation: fadein 2s; /* Opera */
 	}
 
 	aside:hover {
@@ -539,8 +541,8 @@ aside {
 		position: absolute;
 		content: '+';
 		text-align: center;
-		background: #1b1b21;
-		color: #f6f4ec;
+		background: $darkNavy;
+		color: $white;
 		font-size: 20px;
 		width: 30px;
 		height: 30px;
@@ -550,6 +552,7 @@ aside {
 		margin-left: -15px;
 	}
 }
+
 @media (min-width: 94em) {
 	body {
 		font-size: 1.375em;
@@ -571,6 +574,7 @@ aside {
 		width: 34rem;
 	}
 }
+
 @media (min-width: 120em) {
 	body {
 		font-size: 1.5em;
@@ -598,7 +602,9 @@ aside {
 		margin-left: -49rem;
 	}
 }
+
 /* Animations */
+
 @keyframes fadein {
 	from {
 		opacity: 0;
@@ -607,6 +613,7 @@ aside {
 		opacity: 1;
 	}
 }
+
 /* Firefox */
 @-moz-keyframes fadein {
 	from {
@@ -616,6 +623,7 @@ aside {
 		opacity: 1;
 	}
 }
+
 /* Safari and Chrome */
 @-webkit-keyframes fadein {
 	from {
@@ -625,6 +633,7 @@ aside {
 		opacity: 1;
 	}
 }
+
 /* Internet Explorer */
 @-ms-keyframes fadein {
 	from {
@@ -634,6 +643,7 @@ aside {
 		opacity: 1;
 	}
 }
+
 /* Opera */
 @-o-keyframes fadein {
 	from {
@@ -643,5 +653,3 @@ aside {
 		opacity: 1;
 	}
 }
-
-/*# sourceMappingURL=style.css.map */
