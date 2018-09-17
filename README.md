@@ -8,7 +8,7 @@ Thanks goes to [Treehouse](https://teamtreehouse.com/) for making this [Web Typo
 
 ## Description
 
-Re-created a Web Typography focused site using CSS. This site uses the CSS Zen Garden template as its starting point.
+Re-created a Web Typography focused site using Sass rather than plain CSS as used throughout the course. This site uses the CSS Zen Garden template as its starting point.
 
 ### Running
 
@@ -21,7 +21,7 @@ Deployed on [GitHub Pages](https://mithipster.github.io/treehouse_web_typography
 ## Built With
 
 - HTML
-- CSS
+- SASS
 - Google Fonts
 
 ## Re-creator
