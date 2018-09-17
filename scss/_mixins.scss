@@ -1,0 +1,55 @@
+// Media Queries
+
+@mixin max-width-x-small {
+  @media (max-width: #{$x-small}) {
+    @content;
+  }
+}
+
+@mixin max-width-small {
+  @media (max-width: #{$small}) {
+    @content;
+  }
+}
+
+@mixin min-width-small {
+  @media (min-width: #{$small}) {
+    @content;
+  }
+}
+
+@mixin max-width-medium {
+  @media (max-width: #{$medium}) {
+    @content;
+  }
+}
+
+@mixin min-width-medium {
+  @media (min-width: #{$medium}) {
+    @content;
+  }
+}
+
+@mixin max-width-large {
+  @media (max-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin min-width-large {
+  @media (min-width: #{$large}) {
+    @content;
+  }
+}
+
+@mixin min-width-x-large {
+  @media (min-width: #{$x-large}) {
+    @content;
+  }
+}
+
+@mixin min-width-xx-large {
+  @media (min-width: #{$xx-large}) {
+    @content;
+  }
+}

@@ -9,6 +9,7 @@
 
 /* Imports */
 @import 'variables';
+@import 'mixins';
 
 /* Basic Elements */
 html {
@@ -29,11 +30,23 @@ body {
 	-ms-font-feature-settings: 'kern', 'liga';
 	-o-font-feature-settings: 'kern', 'liga';
 	-webkit-font-feature-settings: 'kern', 'liga';
+	@include max-width-large {
+		font-size: $font-body-size - 0.125em;
+	}
+	@include max-width-medium {
+		font-size: $font-body-size - 0.25em;
+	}
+	@include min-width-x-large {
+		font-size: $font-body-size + 0.125em;
+	}
+	@include min-width-xx-large {
+		font-size: $font-body-size + 0.25em;
+	}
 }
 
 p {
 	margin: 0;
-	& + p {
+	+ p {
 		text-indent: 1.5em;
 	}
 }
@@ -66,6 +79,9 @@ h3 {
 	font-size: $font-h3-size;
 	line-height: 1.2;
 	margin: 0.9em 0 0.62em;
+	@include max-width-x-small {
+		font-size: $font-h3-size - 0.444em;
+	}
 }
 
 ul {
@@ -108,11 +124,21 @@ header {
 	-moz-animation: fadein 2s; /* Firefox */
 	-ms-animation: fadein 2s; /* Internet Explorer */
 	-o-animation: fadein 2s; /* Opera */
+	@include max-width-x-small {
+		padding: 6em 4%;
+	}
 	h1 {
 		font-size: $font-header-h1;
 		font-weight: 900;
 		color: $navy-gray;
 		margin: 0;
+		@include max-width-small {
+			font-size: $font-header-h1 - 1.7em;
+		}
+		@include max-width-x-small {
+			font-size: $font-header-h1 - 3.6em;
+			line-height: 0.8;
+		}
 	}
 	h2 {
 		font-family: $font-body;
@@ -120,6 +146,14 @@ header {
 		letter-spacing: 0.3em;
 		text-transform: uppercase;
 		font-style: normal;
+		@include max-width-small {
+			font-size: $font-header-h2 - 0.444em;
+		}
+		@include max-width-x-small {
+			font-size: $font-header-h2 - 0.777em;
+			letter-spacing: 0.2em;
+			margin-top: 0.3em;
+		}
 	}
 	abbr {
 		text-transform: uppercase;
@@ -137,12 +171,32 @@ header {
 		margin: 0 auto;
 		line-height: 1.4;
 		font-style: italic;
-		& + p {
+		@include max-width-large {
+			max-width: 40rem;
+		}
+		@include max-width-medium {
+			max-width: 34rem;
+		}
+		@include max-width-x-small {
+			font-size: $font-summary-size - 0.333em;
+			line-height: 1.6;
+			max-width: 27.5rem;
+		}
+		@include min-width-x-large {
+			max-width: 49rem;
+		}
+		@include min-width-xx-large {
+			max-width: 51rem;
+		}
+		+ p {
 			text-indent: 0;
 			font-style: normal;
 			font-size: $font-summary-size - 0.333em;
 			margin-top: 0.2em;
 			color: $dark-green;
+			@include max-width-x-small {
+				font-size: $font-summary-size - 0.433em;
+			}
 		}
 	}
 	a {
@@ -163,11 +217,23 @@ header {
 	h3 {
 		max-width: 34rem;
 		margin: 0 auto 0.62em;
+		@include max-width-large {
+			max-width: 27.5rem;
+		}
+		@include min-width-xx-large {
+			max-width: 37.5rem;
+		}
 	}
 	p {
 		max-width: 34rem;
 		margin: 0 auto;
 		color: $white;
+		@include max-width-large {
+			max-width: 27.5rem;
+		}
+		@include min-width-xx-large {
+			max-width: 37.5rem;
+		}
 	}
 }
 
@@ -200,15 +266,58 @@ header {
 .benefits {
 	background: $dark-navy;
 	padding: 4em 6%;
+	@include min-width-small {
+		position: absolute;
+		float: left;
+		background: none;
+		max-width: 7.5rem;
+		text-align: right;
+		margin-top: 12em;
+		left: 50%;
+		margin-left: -25.5rem;
+	}
+	@include min-width-medium {
+		max-width: 8rem;
+		margin-top: 12.5em;
+		margin-left: -28rem;
+	}
+	@include min-width-large {
+		max-width: 9.4rem;
+		margin-top: 13.1em;
+		margin-left: -34rem;
+	}
+	@include min-width-x-large {
+		max-width: 12.5rem;
+		margin-left: -41rem;
+	}
+	@include min-width-xx-large {
+		margin-left: -49rem;
+	}
 	h3 {
 		max-width: 34rem;
 		margin: 0 auto 0.62em;
 		color: $light-gray;
+		@include max-width-large {
+			max-width: 27.5rem;
+		}
+		@include min-width-small {
+			font-size: 1em;
+			margin: 0;
+			font-family: $font-link;
+			font-style: normal;
+		}
 	}
 	p {
 		max-width: 34rem;
 		margin: 0 auto;
 		color: $medium-gray;
+		@include max-width-large {
+			max-width: 27.5rem;
+		}
+		@include min-width-small {
+			font-size: 0.75em;
+			line-height: 1.4;
+		}
 	}
 }
 
@@ -216,11 +325,33 @@ header {
 .participation {
 	width: 50%;
 	box-sizing: border-box;
+	@include max-width-small {
+		width: 100%;
+		padding: 4em 6%;
+	}
 	h3 {
 		margin: 0 auto 0.62em;
+		@include max-width-large {
+			max-width: 27.5rem;
+		}
+		@include min-width-x-large {
+			width: 34rem;
+		}
+		@include min-width-xx-large {
+			max-width: 37.5rem;
+		}
 	}
 	p {
 		margin: 0 auto;
+		@include max-width-large {
+			max-width: 27.5rem;
+		}
+		@include min-width-x-large {
+			width: 34rem;
+		}
+		@include min-width-xx-large {
+			max-width: 37.5rem;
+		}
 	}
 }
 
@@ -282,6 +413,37 @@ footer {
 
 aside {
 	width: 100%;
+	@include min-width-large {
+		position: absolute;
+		top: -26.5em;
+		transition: all 0.4s ease;
+		animation: fadein 2s;
+		-webkit-animation: fadein 2s; /* Safari and Chrome */
+		-moz-animation: fadein 2s; /* Firefox */
+		-ms-animation: fadein 2s; /* Internet Explorer */
+		-o-animation: fadein 2s; /* Opera */
+	}
+	&:hover {
+		@include min-width-large {
+			top: -1em;
+		}
+	}
+	&:after {
+		@include min-width-large {
+			position: absolute;
+			content: '+';
+			text-align: center;
+			background: $dark-navy;
+			color: $white;
+			font-size: 20px;
+			width: 30px;
+			height: 30px;
+			border-radius: 30px;
+			bottom: -0.65em;
+			left: 50%;
+			margin-left: -15px;
+		}
+	}
 }
 
 .sidebar {
@@ -323,10 +485,21 @@ aside {
 	font-style: italic;
 	box-sizing: border-box;
 	border-right: 1px solid $dark-blue;
+	@include max-width-x-small {
+		width: 100%;
+		border-right: none;
+		padding: 0 3%;
+	}
 	a:nth-of-type(even) {
 		font-family: $font-body;
 		letter-spacing: 0;
 		color: $white;
+	}
+	li:last-of-type {
+		@include max-width-x-small {
+			border-bottom: 1px solid $dark-blue;
+			padding-bottom: 3em;
+		}
 	}
 }
 
@@ -339,235 +512,24 @@ aside {
 	}
 }
 
+.design-archives {
+	@include max-width-x-small {
+		padding-top: 3em;
+		width: 100%;
+	}
+}
+
+.zen-resources {
+	@include max-width-x-small {
+		width: 100%;
+	}
+}
+
 .zen-resources h3 {
 	padding-top: 0.92em;
 }
 
 /* Media Queries */
-
-@media (max-width: 64em) {
-	body {
-		font-size: $font-body-size - 0.125em;
-	}
-
-	.summary p {
-		max-width: 40rem;
-	}
-
-	.explanation h3,
-	.participation h3,
-	.preamble h3,
-	.requirements h3,
-	.benefits h3 {
-		max-width: 27.5rem;
-	}
-
-	.explanation p,
-	.participation p,
-	.preamble p,
-	.requirements p,
-	.benefits p {
-		max-width: 27.5rem;
-	}
-}
-
-@media (max-width: 54em) {
-	body {
-		font-size: $font-body-size - 0.25em;
-	}
-
-	.summary p {
-		max-width: 34rem;
-	}
-}
-
-@media (max-width: 47em) {
-	header h1 {
-		font-size: $font-header-h1 - 1.7em;
-	}
-
-	header h2 {
-		font-size: $font-header-h2 - 0.444em;
-	}
-
-	.explanation,
-	.participation {
-		width: 100%;
-		padding: 4em 6%;
-	}
-}
-
-@media (max-width: 34em) {
-	header {
-		padding: 6em 4%;
-	}
-	header h1 {
-		font-size: $font-header-h1 - 3.6em;
-		line-height: 0.8;
-	}
-
-	header h2 {
-		font-size: $font-header-h2 - 0.777em;
-		letter-spacing: 0.2em;
-		margin-top: 0.3em;
-	}
-
-	.summary p {
-		font-size: $font-summary-size - 0.333em;
-		line-height: 1.6;
-		max-width: 27.5rem;
-	}
-
-	.summary p + p {
-		font-size: $font-summary-size - 0.433em;
-	}
-
-	h3 {
-		font-size: $font-h3-size - 0.444em;
-	}
-
-	.design-selection {
-		width: 100%;
-		border-right: none;
-		padding: 0 3%;
-	}
-
-	.design-selection li:last-of-type {
-		border-bottom: 1px solid $dark-blue;
-		padding-bottom: 3em;
-	}
-
-	.design-archives {
-		padding-top: 3em;
-		width: 100%;
-	}
-
-	.zen-resources {
-		width: 100%;
-	}
-}
-
-@media (min-width: 47em) {
-	.benefits {
-		position: absolute;
-		float: left;
-		background: none;
-		max-width: 7.5rem;
-		text-align: right;
-		margin-top: 12em;
-		left: 50%;
-		margin-left: -25.5rem;
-	}
-
-	.benefits h3 {
-		font-size: 1em;
-		margin: 0;
-		font-family: 'Alegreya Sans SC', 'Alegreya Sans', Verdana, Tahoma,
-			sans-serif;
-		font-style: normal;
-	}
-
-	.benefits p {
-		font-size: 0.75em;
-		line-height: 1.4;
-	}
-}
-
-@media (min-width: 54em) {
-	.benefits {
-		max-width: 8rem;
-		margin-top: 12.5em;
-		margin-left: -28rem;
-	}
-}
-
-@media (min-width: 64.125em) {
-	.benefits {
-		max-width: 9.4rem;
-		margin-top: 13.1em;
-		margin-left: -34rem;
-	}
-
-	aside {
-		position: absolute;
-		top: -26.5em;
-		transition: all 0.4s ease;
-		animation: fadein 2s;
-		-webkit-animation: fadein 2s; /* Safari and Chrome */
-		-moz-animation: fadein 2s; /* Firefox */
-		-ms-animation: fadein 2s; /* Internet Explorer */
-		-o-animation: fadein 2s; /* Opera */
-	}
-
-	aside:hover {
-		top: -1em;
-	}
-
-	aside:after {
-		position: absolute;
-		content: '+';
-		text-align: center;
-		background: $dark-navy;
-		color: $white;
-		font-size: 20px;
-		width: 30px;
-		height: 30px;
-		border-radius: 30px;
-		bottom: -0.65em;
-		left: 50%;
-		margin-left: -15px;
-	}
-}
-
-@media (min-width: 94em) {
-	body {
-		font-size: $font-body-size + 0.125em;
-	}
-
-	.summary p {
-		max-width: 49rem;
-	}
-
-	.benefits {
-		max-width: 12.5rem;
-		margin-left: -41rem;
-	}
-
-	.explanation h3,
-	.explanation p,
-	.participation h3,
-	.participation p {
-		width: 34rem;
-	}
-}
-
-@media (min-width: 120em) {
-	body {
-		font-size: $font-body-size + 0.25em;
-	}
-
-	.summary p {
-		max-width: 51rem;
-	}
-
-	.preamble h3,
-	.preamble p,
-	.requirements h3,
-	.requirements p {
-		max-width: 37.5rem;
-	}
-
-	.explanation h3,
-	.explanation p,
-	.participation h3,
-	.participation p {
-		width: 37.5rem;
-	}
-
-	.benefits {
-		margin-left: -49rem;
-	}
-}
 
 /* Animations */
 
