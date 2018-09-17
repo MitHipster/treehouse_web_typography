@@ -92,9 +92,7 @@ a {
 		text-decoration: none;
 		transition: all 0.4s ease;
 	}
-	&:visited {
-		text-decoration: none;
-	}
+	&:visited,
 	&:hover,
 	&:focus,
 	&:active {
@@ -205,9 +203,9 @@ header {
 .requirements {
 	background: $navy-gray;
 	padding: 4em 6%;
-	h3 {
+	h3,
+	p {
 		max-width: 34rem;
-		margin: 0 auto 0.62em;
 		@include max-width-large {
 			max-width: 27.5rem;
 		}
@@ -215,16 +213,12 @@ header {
 			max-width: 37.5rem;
 		}
 	}
+	h3 {
+		margin: 0 auto 0.62em;
+	}
 	p {
-		max-width: 34rem;
 		margin: 0 auto;
 		color: $white;
-		@include max-width-large {
-			max-width: 27.5rem;
-		}
-		@include min-width-xx-large {
-			max-width: 37.5rem;
-		}
 	}
 }
 
@@ -320,8 +314,8 @@ header {
 		width: 100%;
 		padding: 4em 6%;
 	}
-	h3 {
-		margin: 0 auto 0.62em;
+	h3,
+	p {
 		@include max-width-large {
 			max-width: 27.5rem;
 		}
@@ -332,17 +326,11 @@ header {
 			max-width: 37.5rem;
 		}
 	}
+	h3 {
+		margin: 0 auto 0.62em;
+	}
 	p {
 		margin: 0 auto;
-		@include max-width-large {
-			max-width: 27.5rem;
-		}
-		@include min-width-x-large {
-			width: 34rem;
-		}
-		@include min-width-xx-large {
-			max-width: 37.5rem;
-		}
 	}
 }
 
