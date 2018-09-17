@@ -617,7 +617,6 @@ aside {
   padding-top: 0.92em;
 }
 
-/* Media Queries */
 /* Animations */
 @keyframes fadein {
   from {
@@ -627,7 +626,6 @@ aside {
     opacity: 1;
   }
 }
-/* Firefox */
 @-moz-keyframes fadein {
   from {
     opacity: 0;
@@ -636,7 +634,6 @@ aside {
     opacity: 1;
   }
 }
-/* Safari and Chrome */
 @-webkit-keyframes fadein {
   from {
     opacity: 0;
@@ -645,7 +642,6 @@ aside {
     opacity: 1;
   }
 }
-/* Internet Explorer */
 @-ms-keyframes fadein {
   from {
     opacity: 0;
@@ -654,7 +650,6 @@ aside {
     opacity: 1;
   }
 }
-/* Opera */
 @-o-keyframes fadein {
   from {
     opacity: 0;

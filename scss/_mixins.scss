@@ -1,55 +1,91 @@
 // Media Queries
-
 @mixin max-width-x-small {
-  @media (max-width: #{$x-small}) {
-    @content;
-  }
+	@media (max-width: #{$x-small}) {
+		@content;
+	}
 }
 
 @mixin max-width-small {
-  @media (max-width: #{$small}) {
-    @content;
-  }
+	@media (max-width: #{$small}) {
+		@content;
+	}
 }
 
 @mixin min-width-small {
-  @media (min-width: #{$small}) {
-    @content;
-  }
+	@media (min-width: #{$small}) {
+		@content;
+	}
 }
 
 @mixin max-width-medium {
-  @media (max-width: #{$medium}) {
-    @content;
-  }
+	@media (max-width: #{$medium}) {
+		@content;
+	}
 }
 
 @mixin min-width-medium {
-  @media (min-width: #{$medium}) {
-    @content;
-  }
+	@media (min-width: #{$medium}) {
+		@content;
+	}
 }
 
 @mixin max-width-large {
-  @media (max-width: #{$large}) {
-    @content;
-  }
+	@media (max-width: #{$large}) {
+		@content;
+	}
 }
 
 @mixin min-width-large {
-  @media (min-width: #{$large}) {
-    @content;
-  }
+	@media (min-width: #{$large}) {
+		@content;
+	}
 }
 
 @mixin min-width-x-large {
-  @media (min-width: #{$x-large}) {
-    @content;
-  }
+	@media (min-width: #{$x-large}) {
+		@content;
+	}
 }
 
 @mixin min-width-xx-large {
-  @media (min-width: #{$xx-large}) {
-    @content;
-  }
+	@media (min-width: #{$xx-large}) {
+		@content;
+	}
+}
+
+// Font Feature Settings
+@mixin font-features {
+	font-feature-settings: 'kern', 'liga';
+	-moz-font-feature-settings: 'kern', 'liga';
+	-moz-font-feature-settings: 'kern=1', 'liga=1';
+	-ms-font-feature-settings: 'kern', 'liga';
+	-o-font-feature-settings: 'kern', 'liga';
+	-webkit-font-feature-settings: 'kern', 'liga';
+}
+
+// Animations
+@mixin animations {
+	animation: fadein 2s;
+	-webkit-animation: fadein 2s; /* Safari and Chrome */
+	-moz-animation: fadein 2s; /* Firefox */
+	-ms-animation: fadein 2s; /* Internet Explorer */
+	-o-animation: fadein 2s; /* Opera */
+}
+
+@mixin keyframes($animationName) {
+	@keyframes #{$animationName} {
+		@content;
+	}
+	@-moz-keyframes #{$animationName} {
+		@content;
+	}
+	@-webkit-keyframes #{$animationName} {
+		@content;
+	}
+	@-ms-keyframes #{$animationName} {
+		@content;
+	}
+	@-o-keyframes #{$animationName} {
+		@content;
+	}
 }

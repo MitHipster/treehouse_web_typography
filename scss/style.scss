@@ -24,12 +24,7 @@ body {
 	padding: 0;
 	color: $navy-gray;
 	background: $white;
-	font-feature-settings: 'kern', 'liga';
-	-moz-font-feature-settings: 'kern', 'liga';
-	-moz-font-feature-settings: 'kern=1', 'liga=1';
-	-ms-font-feature-settings: 'kern', 'liga';
-	-o-font-feature-settings: 'kern', 'liga';
-	-webkit-font-feature-settings: 'kern', 'liga';
+	@include font-features;
 	@include max-width-large {
 		font-size: $font-body-size - 0.125em;
 	}
@@ -119,11 +114,7 @@ abbr {
 header {
 	padding: 10em 4%;
 	text-align: center;
-	animation: fadein 2s;
-	-webkit-animation: fadein 2s; /* Safari and Chrome */
-	-moz-animation: fadein 2s; /* Firefox */
-	-ms-animation: fadein 2s; /* Internet Explorer */
-	-o-animation: fadein 2s; /* Opera */
+	@include animations;
 	@include max-width-x-small {
 		padding: 6em 4%;
 	}
@@ -417,11 +408,7 @@ aside {
 		position: absolute;
 		top: -26.5em;
 		transition: all 0.4s ease;
-		animation: fadein 2s;
-		-webkit-animation: fadein 2s; /* Safari and Chrome */
-		-moz-animation: fadein 2s; /* Firefox */
-		-ms-animation: fadein 2s; /* Internet Explorer */
-		-o-animation: fadein 2s; /* Opera */
+		@include animations;
 	}
 	&:hover {
 		@include min-width-large {
@@ -529,51 +516,9 @@ aside {
 	padding-top: 0.92em;
 }
 
-/* Media Queries */
-
 /* Animations */
 
-@keyframes fadein {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-/* Firefox */
-@-moz-keyframes fadein {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-/* Safari and Chrome */
-@-webkit-keyframes fadein {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-/* Internet Explorer */
-@-ms-keyframes fadein {
-	from {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
-}
-
-/* Opera */
-@-o-keyframes fadein {
+@include keyframes(fadein) {
 	from {
 		opacity: 0;
 	}
